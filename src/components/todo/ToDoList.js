@@ -1,4 +1,4 @@
-import ToDo from "./ToDo";
+import ToDo from './ToDo';
 
 const ToDoList = ({
   displayStatus,
@@ -14,11 +14,11 @@ const ToDoList = ({
     <div className="tasks">
       {toDoList
         .filter((todo) => {
-          if (displayStatus === "all") {
+          if (displayStatus === 'all') {
             return true;
-          } else if (displayStatus === "pending") {
+          } else if (displayStatus === 'pending') {
             return todo.completed === false;
-          } else if (displayStatus === "completed") {
+          } else if (displayStatus === 'completed') {
             return todo.completed === true;
           } else {
             return false; // should not be needed

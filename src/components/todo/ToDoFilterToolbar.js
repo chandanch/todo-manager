@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const ToDoFilterToolbar = ({
   displayStatus,
@@ -27,11 +27,11 @@ const ToDoFilterToolbar = ({
             <li className="nav-item">
               <a
                 className={
-                  displayStatus === "all"
-                    ? "nav-link active"
-                    : "nav-link"
+                  displayStatus === 'all'
+                    ? 'nav-link active'
+                    : 'nav-link'
                 }
-                onClick={() => setDisplayStatus("all")}
+                onClick={() => setDisplayStatus('all')}
                 href="#"
               >
                 All
@@ -40,11 +40,11 @@ const ToDoFilterToolbar = ({
             <li className="nav-item">
               <a
                 className={
-                  displayStatus === "pending"
-                    ? "nav-link active"
-                    : "nav-link"
+                  displayStatus === 'pending'
+                    ? 'nav-link active'
+                    : 'nav-link'
                 }
-                onClick={() => setDisplayStatus("pending")}
+                onClick={() => setDisplayStatus('pending')}
                 href="#"
               >
                 Pending
@@ -53,11 +53,11 @@ const ToDoFilterToolbar = ({
             <li className="nav-item">
               <a
                 className={
-                  displayStatus === "completed"
-                    ? "nav-link active"
-                    : "nav-link"
+                  displayStatus === 'completed'
+                    ? 'nav-link active'
+                    : 'nav-link'
                 }
-                onClick={() => setDisplayStatus("completed")}
+                onClick={() => setDisplayStatus('completed')}
                 href="#"
               >
                 Completed
