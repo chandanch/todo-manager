@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { ToDosDataContext } from "../../contexts/ToDosDataContext";
+import { useContext } from 'react';
+import { ToDosDataContext } from '../../contexts/ToDosDataContext';
 
 const Footer = () => {
   const { todoList, deleteTodo, reFetch, loadingStatus } =
@@ -14,7 +14,7 @@ const Footer = () => {
   ).length;
 
   const handleClearCompleted = () => {
-    const response = window.confirm("Clear Completed Todos?");
+    const response = window.confirm('Clear Completed Todos?');
     if (response) {
       let completedIds = todoList
         .filter((todoItem) => {
@@ -39,7 +39,7 @@ const Footer = () => {
         </button>
 
         <div className="footer-refresh" title="Refreshing">
-          {loadingStatus === "loading" ? (
+          {loadingStatus === 'loading' ? (
             <span
               className="spinner-border spinner-border-sm"
               role="status"
@@ -69,26 +69,27 @@ const Footer = () => {
             <p>
               <span className="badge text-bg-secondary">
                 {totalItems}
-              </span>{" "}
-              Items:{" "}
+              </span>{' '}
+              Items:{' '}
               <span className="badge theme-main-bg">
                 {notCompletedItems}
-              </span>{" "}
-              not completed of which{" "}
+              </span>{' '}
+              not completed of which{' '}
               <span className="badge btn-theme-danger">
                 {importantItems}
-              </span>{" "}
+              </span>{' '}
               are important
             </p>
           ) : (
             <p className="hidden-block">
-              <span className="badge text-bg-secondary">x</span>{" "}
-              Items: <span className="badge theme-main-bg">x</span>{" "}
-              not completed of which{" "}
+              <span className="badge text-bg-secondary">x</span>{' '}
+              Items: <span className="badge theme-main-bg">x</span>{' '}
+              not completed of which{' '}
               <span className="badge btn-theme-danger">x</span> are
               important
             </p>
           )}
+          <p>By Chan</p>
         </div>
       </div>
     </footer>

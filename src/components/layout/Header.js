@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 const Header = ({ darkTheme, toggleTheme }) => {
   return (
     <header>
-      <h2>To-do List</h2>
+      <h2>To-do Manager</h2>
       <span className="nav-item">
         <input
           type="checkbox"
