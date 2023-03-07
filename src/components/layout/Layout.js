@@ -3,7 +3,7 @@ import Footer from './Footer';
 import { useContext } from 'react';
 import { ThemeContext } from '../../App';
 
-const Layout = (props) => {
+const Layout = ({ children }) => {
   const { darkTheme } = useContext(ThemeContext);
   const appVersion = '1.0.0';
   return (
@@ -12,7 +12,7 @@ const Layout = (props) => {
       data-theme={darkTheme ? 'dark' : 'light'}
     >
       <Header appVersion={appVersion} />
-      {props.children}
+      {children}
       <br />
       <Footer />
     </div>
