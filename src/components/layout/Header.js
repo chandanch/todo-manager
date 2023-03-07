@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ThemeContext } from '../../App';
 
-const Header = ({ darkTheme, toggleTheme, appVersion }) => {
+const Header = ({ appVersion }) => {
+  const { toggleTheme, darkTheme } = useContext(ThemeContext);
+
   return (
     <header>
       <h2>To-do Manager</h2>
