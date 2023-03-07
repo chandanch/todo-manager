@@ -1,10 +1,14 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout = (props) => {
+  const appVersion = '1.0.0';
   return (
-    <div className="container" data-theme={props.darkTheme ? "dark" : "light"}>
-      <Header toggleTheme={props.toggleTheme} darkTheme={props.darkTheme} />
+    <div
+      className="container"
+      data-theme={props.darkTheme ? 'dark' : 'light'}
+    >
+      <Header {...props} appVersion={appVersion} />
       {props.children}
       <br />
       <Footer />
