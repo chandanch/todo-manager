@@ -1,7 +1,10 @@
 import Header from './Header';
 import Footer from './Footer';
 import { useContext } from 'react';
-import { ThemeContext } from '../../contexts/ThemeContext';
+import {
+  ThemeContext,
+  ThemeProvider,
+} from '../../contexts/ThemeContext';
 
 const Layout = ({ children }) => {
   const { darkTheme } = useContext(ThemeContext);
@@ -19,4 +22,12 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+const LayoutContainer = (props) => {
+  return (
+    <ThemeProvider>
+      <Layout {...props} />
+    </ThemeProvider>
+  );
+};
+
+export default LayoutContainer;
