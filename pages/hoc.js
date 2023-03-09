@@ -18,6 +18,7 @@ const withTheme = (Component) => {
 
     return (
       <Component
+        {...props}
         darkTheme={darkTheme}
         toggleTheme={() => setTheme(!darkTheme)}
       />
