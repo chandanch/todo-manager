@@ -1,9 +1,7 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from '../../contexts/ThemeContext';
+import React from 'react';
+import { withTheme } from '../../hoc/withTheme';
 
-const Header = ({ appVersion }) => {
-  const { toggleTheme, darkTheme } = useContext(ThemeContext);
-
+const Header = ({ appVersion, toggleTheme, darkTheme }) => {
   return (
     <header>
       <h2>To-do Manager</h2>
@@ -32,4 +30,4 @@ const Header = ({ appVersion }) => {
   );
 };
 
-export default Header;
+export default withTheme(Header);
