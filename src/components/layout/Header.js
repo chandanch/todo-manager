@@ -1,10 +1,10 @@
 import React from 'react';
 import { withTheme } from '../../hoc/withTheme';
 
-const Header = ({ appVersion, toggleTheme, darkTheme }) => {
+const Header = ({ appVersion, toggleTheme, darkTheme, appTitle }) => {
   return (
     <header>
-      <h2>To-do Manager</h2>
+      <h2>{appTitle}</h2>
       <span className="nav-item">
         <input
           type="checkbox"

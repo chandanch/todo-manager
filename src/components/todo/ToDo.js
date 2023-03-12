@@ -5,11 +5,12 @@ const ToDo = ({
   handleEdit,
   idUpdating,
 }) => {
+  console.log(`Todo Item: ${todoItem.todoText}`);
   return (
     <div
       key={todoItem.id}
       className={
-        todoItem.completed ? "single-task completed" : "single-task"
+        todoItem.completed ? 'single-task completed' : 'single-task'
       }
     >
       <div
@@ -53,7 +54,7 @@ const ToDo = ({
           className="btn delete"
           title="Delete"
           onClick={() => {
-            const response = window.confirm("Delete?");
+            const response = window.confirm('Delete?');
             if (response) {
               handleDelete(todoItem.id);
             }

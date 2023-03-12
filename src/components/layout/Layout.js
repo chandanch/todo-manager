@@ -9,12 +9,13 @@ import {
 const Layout = ({ children }) => {
   const { darkTheme } = useContext(ThemeContext);
   const appVersion = '1.0.0';
+  const appTitle = 'TODO Manager -- Easy!!';
   return (
     <div
       className="container"
       data-theme={darkTheme ? 'dark' : 'light'}
     >
-      <Header appVersion={appVersion} />
+      <Header appVersion={appVersion} appTitle={appTitle} />
       {children}
       <br />
       <Footer />
