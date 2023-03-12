@@ -1,11 +1,12 @@
-const ToDo = ({
+import ErrorBoundary from '../common/ErrorBoundary';
+
+const Inner = ({
   todoItem,
   handleToggleCompleted,
   handleDelete,
   handleEdit,
   idUpdating,
 }) => {
-  console.log(`Todo Item: ${todoItem.todoText}`);
   return (
     <div
       key={todoItem.id}
@@ -23,7 +24,7 @@ const ToDo = ({
             <i className="fa fa-exclamation-circle"></i>
           </span>
         ) : null}
-        {todoItem.todoText}
+        {todoItem.todoText.toUpperCase()}
       </div>
 
       {idUpdating === todoItem.id ? (
@@ -64,6 +65,14 @@ const ToDo = ({
         </button>
       </div>
     </div>
+  );
+};
+
+const ToDo = (props) => {
+  return (
+    <ErrorBoundary>
+      <Inner {...props} />
+    </ErrorBoundary>
   );
 };
 
