@@ -70,9 +70,17 @@ const Inner = ({
 
 const ToDo = (props) => {
   return (
-    <ErrorBoundary>
+    <ErrorBoundary errorView={<TodoErrorBoundary {...props} />}>
       <Inner {...props} />
     </ErrorBoundary>
+  );
+};
+
+const TodoErrorBoundary = (props) => {
+  return (
+    <div className="single-task text-bg-danger">
+      <b>Something error occurred while displaying Todo!</b>
+    </div>
   );
 };
 
