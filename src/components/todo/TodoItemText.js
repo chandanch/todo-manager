@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 const TodoItemText = ({ important, todoText }) => {
   return (
     <>
@@ -11,4 +13,4 @@ const TodoItemText = ({ important, todoText }) => {
   );
 };
 
-export default TodoItemText;
+export default memo(TodoItemText);
