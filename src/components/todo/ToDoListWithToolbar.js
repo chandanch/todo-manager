@@ -1,5 +1,5 @@
-import React from "react";
-import ToDoFilterToolbar from "./ToDoFilterToolbar";
+import React from 'react';
+import ToDoFilterToolbar from './ToDoFilterToolbar';
 
 const ToDoListWithToolbar = ({
   displayStatus,
@@ -9,6 +9,8 @@ const ToDoListWithToolbar = ({
   searchText,
   setSearchText,
   children,
+  isPending,
+  startTransition,
 }) => (
   <div>
     <ToDoFilterToolbar
@@ -18,6 +20,8 @@ const ToDoListWithToolbar = ({
       setImportant={setImportant}
       searchText={searchText}
       setSearchText={setSearchText}
+      isPending={isPending}
+      startTransition={startTransition}
     />
     {children}
   </div>
